@@ -1,4 +1,4 @@
-
+import { FiSearch } from "react-icons/fi";
 function App() {
   return (
     <div className="container">
@@ -11,10 +11,14 @@ function App() {
         />
 
       <button className="buttonSearch">
-        <p>Search</p>
+        <FiSearch size={25} color="purple"/>
       </button>
-
       </div>
+
+      <main className="main">
+        <h2>ZIP: H2X 2S2</h2>
+      </main>
+
     </div>
   );
 }

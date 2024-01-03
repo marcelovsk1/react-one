@@ -13,7 +13,7 @@ function App() {
         />
 
       <button className="buttonSearch">
-        <FiSearch size={25} color="purple"/>
+        <FiSearch size={25} color="white"/>
       </button>
       </div>
 

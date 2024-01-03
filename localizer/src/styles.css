@@ -43,3 +43,12 @@
 /* .containerInput input::placeholder {
   color: #f1f1f1
 } */
+
+.buttonSearch {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

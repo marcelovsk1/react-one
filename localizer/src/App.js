@@ -7,6 +7,7 @@ import api from './services/api';
 function App() {
 
   const [input, setInput] = useState('')
+  const [zip, setZip] = useState({});
 
   async function handleSearch() {
     // 01310930/json/
@@ -18,7 +19,8 @@ function App() {
 
     try {
       const response = await api.get(`${input}/json`);
-      console.log(response.data)
+      setZip(response.data)
+      setInput("");
 
     } catch {
       alert("Ops, ZIP not found")
@@ -43,13 +45,14 @@ function App() {
       </button>
       </div>
 
+      {Object.keys(zip).lenght > 0}
       <main className="main">
-        <h2>ZIP: H2X 2S2</h2>
+        <h2>ZIP: {zip.cep}</h2>
 
-        <span>Boulevard Robert Bourassa</span>
-        <span>777</span>
-        <span>Downtown</span>
-        <span>Montreal, QC</span>
+        <span>{zip.logradouro}</span>
+        <span>Complemento: {zip.complemento}</span>
+        <span>{zip.bairro}</span>
+        <span>{zip.localidade} - {zip.uf}</span>
       </main>
 
     </div>

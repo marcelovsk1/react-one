@@ -88,4 +88,9 @@
   .main h2 {
     font-size: 28px;
   }
+
+  .main {
+    width: 80%;
+    min-height: 250px;
+  }
 }

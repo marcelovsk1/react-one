@@ -2,12 +2,27 @@ import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import './styles.css';
 
+import api from './services/api'
+
 function App() {
 
   const [input, setInput] = useState('')
 
-  function handleSearch() {
-    alert("Clicked! " + input)
+  async function handleSearch() {
+    // 01310930/json/
+
+    if(input === '') {
+      alert("Type your ZIP CODE")
+      return;
+    }
+
+    try {
+      const response = await api.get('${input}/json');
+      console.log(response)
+
+    } catch {
+
+    }
   }
 
   return (

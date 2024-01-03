@@ -9,6 +9,11 @@ function App() {
         type="text"
         placeholder="Type your ZIP code"
         />
+
+      <button className="buttonSearch">
+        <p>Search</p>
+      </button>
+
       </div>
     </div>
   );

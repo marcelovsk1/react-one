@@ -6,6 +6,10 @@ function App() {
 
   const [input, setInput] = useState('')
 
+  function handleSearch() {
+    alert("Clicked! " + input)
+  }
+
   return (
     <div className="container">
       <h1 className="title">ZIP CODE LOCALIZER</h1>
@@ -18,7 +22,7 @@ function App() {
         onChange={(event) => setInput(event.target.value) }
         />
 
-      <button className="buttonSearch">
+      <button className="buttonSearch" onClick={handleSearch}>
         <FiSearch size={25} color="white"/>
       </button>
       </div>

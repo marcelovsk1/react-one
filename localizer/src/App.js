@@ -17,6 +17,11 @@ function App() {
 
       <main className="main">
         <h2>ZIP: H2X 2S2</h2>
+
+        <span>Boulevard Robert Bourassa</span>
+        <span>777</span>
+        <span>Downtown</span>
+        <span>Montreal, QC</span>
       </main>
 
     </div>

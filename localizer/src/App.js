@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import './styles.css';
 
 function App() {
+
+  const [input, setInput] = useState('')
+
   return (
     <div className="container">
       <h1 className="title">ZIP CODE LOCALIZER</h1>
@@ -10,6 +14,8 @@ function App() {
         <input
         type="text"
         placeholder="Type your ZIP code"
+        value={input}
+        onChange={(event) => setInput(event.target.value) }
         />
 
       <button className="buttonSearch">

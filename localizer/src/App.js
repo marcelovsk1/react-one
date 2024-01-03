@@ -1,8 +1,8 @@
 
 function App() {
   return (
-    <div className="App">
-      <h1>LOCALIZER</h1>
+    <div className="container">
+      <h1 className="title">ZIP CODE LOCALIZER</h1>
     </div>
   );
 }

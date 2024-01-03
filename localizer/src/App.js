@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import './styles.css';
 
-import api from './services/api'
+import api from './services/api';
 
 function App() {
 
@@ -17,11 +17,12 @@ function App() {
     }
 
     try {
-      const response = await api.get('${input}/json');
-      console.log(response)
+      const response = await api.get(`${input}/json`);
+      console.log(response.data)
 
     } catch {
-
+      alert("Ops, ZIP not found")
+      setInput("")
     }
   }
 
